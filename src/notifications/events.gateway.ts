@@ -11,7 +11,7 @@ export class EventsGateway implements OnGatewayConnection, OnGatewayDisconnect {
  handleDisconnect(client: Socket) { this.logger.log(`Disconnected: ${client.id}`); }
  @SubscribeMessage('ping') ping(@ConnectedSocket() client: Socket) { client.emit('pong', { timestamp: new Date().toISOString() }); }
  @SubscribeMessage('broadcastNotification') broadcast(@MessageBody() data: unknown) {
-  if (typeof data !== 'string' || !data.trim() || data.length > 500) throw new WsException('Message must contain 1–500 characters');
+  if (typeof data !== 'string' || !data.trim() || data.length > 500) throw new WsException('Message must contain 1-500 characters');
   this.server.emit('globalAlert', { message: data.trim(), timestamp: new Date().toISOString() });
  }
  private room(data: unknown): string {
