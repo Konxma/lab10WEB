@@ -1,0 +1,9 @@
+{
+  "twoClients": true,
+  "broadcast": true,
+  "isolatedRoom": true,
+  "dropStarted": true,
+  "sse": true,
+  "mailpit": true,
+  "browserErrors": []
+}

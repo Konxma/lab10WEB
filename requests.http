@@ -1,0 +1,19 @@
+@base = http://localhost:3010
+
+### Колекції
+GET {{base}}/collections
+
+### Відкрити продажі (спочатку приєднайте клієнт до drop_101)
+POST {{base}}/collections/101/start
+Content-Type: application/json
+
+{"customerEmail":"buyer@example.com"}
+
+### Валідація email → 400
+POST {{base}}/collections/202/start
+Content-Type: application/json
+
+{"customerEmail":"invalid"}
+
+### Потік SSE (з’єднання залишається відкритим)
+GET {{base}}/notifications/events/stream

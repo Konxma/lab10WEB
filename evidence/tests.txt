@@ -1,0 +1,33 @@
+npm notice run lab10web@1.0.0 test
+npm notice run npm run build && node --test test/notifications.test.js
+npm notice run lab10web@1.0.0 build
+npm notice run tsc -p tsconfig.json
+TAP version 13
+# Subtest: SMTP failure leaves DRAFT and emits no event
+ok 1 - SMTP failure leaves DRAFT and emits no event
+  ---
+  duration_ms: 1.8959
+  type: 'test'
+  ...
+# Subtest: HTML template escapes collection title
+ok 2 - HTML template escapes collection title
+  ---
+  duration_ms: 6.8339
+  type: 'test'
+  ...
+# Verified: ping/pong, two-client broadcast, join/leave isolation, dropStarted, SMTP, 400/404/409, SSE
+# Subtest: Socket.IO, rooms, SSE, REST and SMTP integration (Mailpit must run)
+ok 3 - Socket.IO, rooms, SSE, REST and SMTP integration (Mailpit must run)
+  ---
+  duration_ms: 7703.483
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9207.3281
